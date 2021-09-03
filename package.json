@@ -8,8 +8,16 @@
     "watch": "sergey --root=./src/ --output=../build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoonweiting/prismjs-playground.git"
+  },
   "author": "Wei Ting",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoonweiting/prismjs-playground/issues"
+  },
+  "homepage": "https://github.com/hoonweiting/prismjs-playground#readme",
   "devDependencies": {
     "sergey": "0.0.13"
   }
