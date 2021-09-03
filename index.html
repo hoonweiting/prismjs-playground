@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prism.js playground!</title>
+    <!-- new.css so the page doesn't look so ugly -->
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css" />
+    <!-- Default CSS for some Prism plugins, feel free to comment these out if you don't want to style for them -->
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/match-braces/prism-match-braces.css" />
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/show-invisibles/prism-show-invisibles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/line-highlight/prism-line-highlight.css" />
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.css" />
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/toolbar/prism-toolbar.css" />
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/diff-highlight/prism-diff-highlight.css" />
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/command-line/prism-command-line.css" />
+    <!-- Prism theme to test -->
+    <link rel="stylesheet" href="prism-test.css" />
+  </head>
+
+  <body>
+    <!-- Enable Prism and autoload languages -->
+    <script src="https://unpkg.com/prismjs@1.24.1/components/prism-core.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+    <!-- More plugins! Feel free to comment these out if you don't want to bother with them -->
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/match-braces/prism-match-braces.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/show-invisibles/prism-show-invisibles.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/line-highlight/prism-line-highlight.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <!-- <script src="https://unpkg.com/prismjs@1.24.1/plugins/keep-markup/prism-keep-markup.min.js"></script> -->
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/diff-highlight/prism-diff-highlight.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/command-line/prism-command-line.min.js"></script>
+
+    <header>
+      <h1>Prism.js playground!</h1>
+      <p>
+        Here is where I load CSS files to see what each token looks like in a few languages (and with some plugins enabled). Unfortunately, not all tokens are covered in the selected languages, much less all the other languages.
+      </p>
+    </header>
+
+    <main>
+      <h2 id="html">HTML</h2>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;title&gt;I can haz embedded CSS and JS&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        background: url(&#39;foo.png&#39;);
+        color: #EEE;
+        height: calc(100vw - 10px);
+      }
+
+      @media screen and (min-width: 100px) {
+        p {
+          color: rgb(12, 12, 12) !important;
+        }
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;h1&gt;I can haz embedded CSS and JS&lt;/h1&gt;
+    &lt;script&gt;
+      if (true) {
+        console.log(&#39;foo&#39;);
+      }
+    &lt;/script&gt;
+    &lt;h2 class=&quot;cheezborger&quot; style=&quot;color: pink&quot;&gt;CHEEZBORGER&lt;/h2&gt;
+  &lt;/body&gt;
+  &lt;!-- KTHXBAI --&gt;
+&lt;/html&gt;</code></pre>
+<h2 id="css">CSS</h2>
+<pre><code class="language-css">/* selector, punctuation, property, url, function, string */
+body {
+  background: url(&#39;foo bar.png&#39;);
+  color: #EEE;
+  height: calc(100vw - 10px);
+  content: &#39;foo&#39;;
+}
+
+/* atrule, important */
+@media screen and (min-width: 100px) {
+  p {
+    background: url(bar.png);
+    color: rgb(12, 12, 12) !important;
+  }
+}</code></pre>
+<p>Maybe I&#39;ll work on the CSS preprocessors someday :&quot;)</p>
+<h2 id="javascript">JavaScript</h2>
+<pre><code class="language-javascript">// keyword, operator, string, punctuation, number
+var foo = &#39;bar&#39;, baz = 5;
+
+// boolean, function, template-string
+if (true) {
+  console.log(`foo ${foo}`);
+  doSomething(&#39;silly&#39;);
+}
+
+// regex
+let regex = /\/\*[\w\W]*?\*\//g;</code></pre>
+<h2 id="json">JSON</h2>
+<pre><code class="language-json">{
+  &quot;data&quot;: {
+    &quot;labels&quot;: [
+      &quot;foo&quot;,
+      &quot;bar&quot;
+    ],
+    &quot;series&quot;: [
+      [ 0, 1, 2, 3 ],
+      [ 0, -4, -8, -12 ]
+    ]
+  },
+  // comments aren&#39;t actually a thing
+  &quot;error&quot;: null,
+  &quot;status&quot;: &quot;Ok&quot;
+}</code></pre>
+<h2 id="markdown">Markdown</h2>
+<pre><code class="language-markdown">---
+front: matter
+number: 5
+boolean: true
+---
+# This is a heading
+
+This is some text,
+1. *italics*,
+2. **bold**,
+3. ~~strike~~,
+4. ***italics and bold***,
+5. *~~italics and strike~~*,
+6. ~~*strike and italics*~~,
+7. **~~bold and strike~~**,
+8. ~~**strike and bold**~~,
+9. ***~~italics and bold and strike~~***
+10. ~~***strike and italics and bold***~~,
+11. `inline code`,
+12. [a link](https://www.markdownguide.org/cheat-sheet/),
+13. ![an image](image.jpg)
+
++ Here is an unordered list
++ Here is another item on the list
+    - Here is an indented item
+
+&gt; This is a quote!
+&gt;&gt; This is a nested quote
+&gt; Back to the parent quote
+
+Term
+: Its definition and a footnote [^1]
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+
+- [x] Atom One Dark
+- [ ] Atom One Light
+- [ ] Maybe more to come?
+
+[^1]: The footnote
+
+---
+
+## Let&#39;s take a look at a code block {#code-block}
+
+```html
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;title&gt;Testing testing 1 2 3&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;main&gt;
+      &lt;h1&gt;Baa baa black sheep&lt;/h1&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+```</code></pre>
+    </main>
+
+    <hr />
+
+    <footer>
+      <a href="https://github.com/hoonweiting/prismjs-playground">
+        <button>Go back to the repository on GitHub</button>
+      </a>
+    </footer>
+  </body>
+</html>
