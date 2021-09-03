@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/hoonweiting/prismjs-playground#readme",
   "devDependencies": {
+    "html-minifier": "^4.0.0",
     "sergey": "0.0.13",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0"
