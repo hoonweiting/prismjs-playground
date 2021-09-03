@@ -4,7 +4,9 @@
   "description": "A sandbox for me to develop and test new themes for prism.js",
   "main": "index.js",
   "scripts": {
+    "prebuild": "npm run lint",
     "build": "sergey --root=./src/ --output=../build",
+    "lint": "stylelint \"src/*.css\"",
     "watch": "sergey --root=./src/ --output=../build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
