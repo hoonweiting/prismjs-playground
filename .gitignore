@@ -97,6 +97,7 @@ dist
 
 # Sergey build output
 build/
+deploy/
 
 # Serverless directories
 .serverless/

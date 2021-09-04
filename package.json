@@ -6,7 +6,8 @@
   "scripts": {
     "prebuild": "npm run lint",
     "build": "sergey --root=./src/ --output=../build",
-    "lint": "stylelint \"src/*.css\"",
+    "deploy": "npx gulp deploy",
+    "lint": "npx stylelint \"src/*.css\"",
     "watch": "sergey --root=./src/ --output=../build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +22,9 @@
   },
   "homepage": "https://github.com/hoonweiting/prismjs-playground#readme",
   "devDependencies": {
-    "html-minifier": "^4.0.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
     "sergey": "0.0.13",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0"
