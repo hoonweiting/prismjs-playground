@@ -8,32 +8,20 @@
     <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css" />
     <!-- Default CSS for some Prism plugins, feel free to comment these out if you don't want to style for them -->
-    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/match-braces/prism-match-braces.css" />
     <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/show-invisibles/prism-show-invisibles.css" />
-    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/line-highlight/prism-line-highlight.css" />
-    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.css" />
     <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/toolbar/prism-toolbar.css" />
-    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/diff-highlight/prism-diff-highlight.css" />
-    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/command-line/prism-command-line.css" />
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/previewers/prism-previewers.css" />
+    <!-- Not set up for these yet -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/line-highlight/prism-line-highlight.css" /> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.css" /> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/command-line/prism-command-line.css" /> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/match-braces/prism-match-braces.css" /> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/plugins/diff-highlight/prism-diff-highlight.css" /> -->
     <!-- Prism theme to test -->
     <link rel="stylesheet" href="prism-test.css" />
   </head>
 
   <body>
-    <!-- Enable Prism and autoload languages -->
-    <script src="https://unpkg.com/prismjs@1.24.1/components/prism-core.min.js"></script>
-    <script src="https://unpkg.com/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
-    <!-- More plugins! Feel free to comment these out if you don't want to bother with them -->
-    <script src="https://unpkg.com/prismjs@1.24.1/plugins/match-braces/prism-match-braces.min.js"></script>
-    <script src="https://unpkg.com/prismjs@1.24.1/plugins/show-invisibles/prism-show-invisibles.min.js"></script>
-    <script src="https://unpkg.com/prismjs@1.24.1/plugins/line-highlight/prism-line-highlight.min.js"></script>
-    <script src="https://unpkg.com/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js"></script>
-    <!-- <script src="https://unpkg.com/prismjs@1.24.1/plugins/keep-markup/prism-keep-markup.min.js"></script> -->
-    <script src="https://unpkg.com/prismjs@1.24.1/plugins/toolbar/prism-toolbar.min.js"></script>
-    <script src="https://unpkg.com/prismjs@1.24.1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
-    <script src="https://unpkg.com/prismjs@1.24.1/plugins/diff-highlight/prism-diff-highlight.min.js"></script>
-    <script src="https://unpkg.com/prismjs@1.24.1/plugins/command-line/prism-command-line.min.js"></script>
-
     <header>
       <h1>Prism.js playground!</h1>
       <p>
@@ -52,5 +40,30 @@
         <button>Go back to the repository on GitHub</button>
       </a>
     </footer>
+
+    <!-- Enable Prism -->
+    <script src="https://unpkg.com/prismjs@1.24.1/components/prism-core.min.js"></script>
+    <!-- CSS Extras is required for Previewers, but Autoloader will not load CSS Extras, so we need to explicitly load it and its dependencies first -->
+    <script src="https://unpkg.com/prismjs@1.24.1/components/prism-markup.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.24.1/components/prism-css.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.24.1/components/prism-css-extras.min.js"></script>
+    <!-- Might as well load the rest of the basics -->
+    <script src="https://unpkg.com/prismjs@1.24.1/components/prism-clike.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.24.1/components/prism-javascript.min.js"></script>
+    <!-- Autoload other languages -->
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+    <!-- More plugins! Feel free to comment these out if you don't want to bother with them -->
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/show-invisibles/prism-show-invisibles.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/show-language/prism-show-language.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.24.1/plugins/previewers/prism-previewers.min.js"></script>
+    <!-- Not set up for these yet -->
+    <!-- <script src="https://unpkg.com/prismjs@1.24.1/plugins/line-highlight/prism-line-highlight.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/prismjs@1.24.1/plugins/command-line/prism-command-line.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/prismjs@1.24.1/plugins/match-braces/prism-match-braces.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/prismjs@1.24.1/plugins/diff-highlight/prism-diff-highlight.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/prismjs@1.24.1/plugins/keep-markup/prism-keep-markup.min.js"></script> -->
   </body>
 </html>
