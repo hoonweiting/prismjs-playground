@@ -1,0 +1,22 @@
+{
+  extends: [
+    'eslint:recommended'
+  ],
+  parser: '@typescript-eslint/parser', // add the TypeScript parser
+  plugins: [
+    'svelte3',
+    '@typescript-eslint' // add the TypeScript plugin
+  ],
+  overrides: [ // this stays the same
+    {
+      files: ['*.svelte'],
+      processor: 'svelte3/svelte3'
+    }
+  ],
+  rules: {
+    'quote-props': [2, 'consistent-as-needed'],
+  },
+  settings: {
+    'svelte3/typescript': true,
+  }
+}
