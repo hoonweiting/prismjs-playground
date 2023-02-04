@@ -1,3 +1,7 @@
+<script lang="ts">
+  import CodeSnippets from "./lib/CodeSnippets.svelte";
+</script>
+
 <header id="site-header">
   <div class="adaptive-content">
     <h1>
@@ -8,7 +12,7 @@
 
 <main class="adaptive-content">
   <aside id="sidebar">
-    <h2>
+    <h2 style="font-size: 1.25rem;">
       Themes
     </h2>
 
@@ -20,6 +24,6 @@
       Code Snippets
     </h2>
 
-    Insert code snippets here
+    <CodeSnippets />
   </section>
 </main>

@@ -26,7 +26,10 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3,
+pre,
+code {
   margin: 0;
 }
 
@@ -38,6 +41,31 @@ h1 {
   font-size: 2rem;
   font-weight: bold;
   line-height: calc(1em + 8px);
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: calc(1em + 8px);
+}
+
+h3 {
+  margin-bottom: 16px;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: calc(1em + 8px);
+}
+
+pre,
+code {
+  white-space: pre-wrap;
+}
+
+pre[class*="language-"] {
+  padding: 16px;
+  margin: -4px -16px;
+  background-color: hsl(0 0% 18%);
 }
 
 /* ==========================================================================
@@ -82,6 +110,7 @@ main {
   grid-template-areas: "sidebar content";
   gap: 32px;
   padding-top: 5rem;
+  padding-bottom: 6rem;
 }
 
 #sidebar {
