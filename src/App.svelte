@@ -1,5 +1,6 @@
 <script lang="ts">
   import CodeSnippets from "./lib/CodeSnippets.svelte";
+  import ThemeList from "./lib/ThemeList.svelte";
 </script>
 
 <header id="site-header">
@@ -16,7 +17,7 @@
       Themes
     </h2>
 
-    Insert themes here
+    <ThemeList />
   </aside>
 
   <section>

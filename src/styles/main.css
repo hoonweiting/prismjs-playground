@@ -33,6 +33,17 @@ code {
   margin: 0;
 }
 
+button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: unset;
+  background-color: unset;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+}
+
 /* ==========================================================================
    Typography
    ========================================================================== */
@@ -59,7 +70,7 @@ h3 {
 
 pre,
 code {
-  white-space: pre-wrap;
+  white-space: pre-wrap !important;
 }
 
 pre[class*="language-"] {
