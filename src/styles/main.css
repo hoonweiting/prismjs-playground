@@ -1,0 +1,89 @@
+:root {
+  color-scheme: dark light;
+  background-color: hsl(0 0% 14%);
+  color: hsl(0 0% 100% / .87);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* ==========================================================================
+   Resets
+   ========================================================================== */
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: calc(1em + 8px);
+}
+
+/* ==========================================================================
+   Layout utilities
+   ========================================================================== */
+
+.adaptive-content {
+  max-width: 1280px;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Site header
+   ========================================================================== */
+
+#site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  height: 4rem;
+  border-bottom: 1px solid hsl(0 0% 0%);
+  background-color: hsl(0 0% 14%);
+}
+
+#site-header > div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* ==========================================================================
+   Main content
+   ========================================================================== */
+
+main {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-areas: "sidebar content";
+  gap: 32px;
+  padding-top: 5rem;
+}
+
+#sidebar {
+  grid-area: sidebar;
+}
